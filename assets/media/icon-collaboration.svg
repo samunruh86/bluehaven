@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="collab-bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#e7f0ff"/>
+      <stop offset="100%" stop-color="#cdddf6"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="40" cy="40" r="38" fill="url(#collab-bg)"/>
+    <path d="M20 32c0-6.627 5.373-12 12-12 4.794 0 8.938 2.813 10.86 6.886a12.002 12.002 0 015.14-1.14 12 12 0 0112 12" stroke="#1f4c8f" stroke-width="4" stroke-linecap="round"/>
+    <path d="M56 48c0 6.627-5.373 12-12 12-4.794 0-8.938-2.813-10.86-6.886A12.002 12.002 0 0128 54a12 12 0 01-12-12" stroke="#1f4c8f" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+    <path d="M24 40h32" stroke="#1f4c8f" stroke-width="4" stroke-linecap="round"/>
+    <path d="M30 46l6-6-6-6M50 34l-6 6 6 6" stroke="#1f4c8f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,15 +1,4 @@
 (() => {
-  const navToggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".site-nav");
-
-  if (navToggle && nav) {
-    navToggle.addEventListener("click", () => {
-      const isOpen = nav.getAttribute("data-state") === "open";
-      nav.setAttribute("data-state", isOpen ? "closed" : "open");
-      navToggle.setAttribute("aria-expanded", String(!isOpen));
-    });
-  }
-
   const form = document.getElementById("contact-form");
   if (!form) return;
 
