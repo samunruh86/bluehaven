@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Blue Haven Brands Monogram</title>
+  <desc id="desc">Stylized BHB monogram within a rounded square.</desc>
+  <rect width="160" height="160" rx="28" fill="#1f4c8f"/>
+  <path fill="#ffffff" d="M46 48h26c18 0 28 8 28 21 0 11-6 17-14 19 10 2 17 9 17 21 0 16-11 25-31 25H46zm24 35c9 0 14-3 14-11s-5-11-14-11h-10v22zm1 38c11 0 17-4 17-13s-6-13-17-13h-12v26zm53-73h20v93h-20z"/>
+</svg>
