@@ -1,50 +1,56 @@
-(() => {
-  const form = document.getElementById("contact-form");
-  if (!form) return;
+document.addEventListener("DOMContentLoaded", () => {
+  initFaqAccordion();
+  initSmoothScroll();
+});
 
-  const statusEl = form.querySelector(".response-note");
-  const submitButton = form.querySelector("button[type='submit']");
-  const defaultLabel = submitButton?.dataset.label || submitButton?.textContent || "Submit";
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll(".faq__item");
+  if (!faqItems.length) return;
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  faqItems.forEach((item) => {
+    const button = item.querySelector(".faq__question");
+    const answer = item.querySelector(".faq__answer");
+    if (!button || !answer) return;
 
-    if (!submitButton || !statusEl) return;
-
-    statusEl.textContent = "";
-    const formData = new FormData(form);
-
-    if (formData.get("website")) {
-      statusEl.textContent = "Something went wrong. Please try again.";
-      return;
-    }
-
-    if (!form.reportValidity()) {
-      statusEl.textContent = "Please complete the required fields.";
-      return;
-    }
-
-    submitButton.disabled = true;
-    submitButton.textContent = "Sending…";
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method || "POST",
-        headers: { Accept: "application/json" },
-        body: formData,
+    button.addEventListener("click", () => {
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+      faqItems.forEach((other) => {
+        if (other !== item) {
+          setFaqState(other, false);
+        }
       });
-
-      if (!response.ok) {
-        throw new Error(`Request failed with status ${response.status}`);
-      }
-
-      statusEl.textContent = "Thanks for reaching out. We will be in touch shortly.";
-      form.reset();
-    } catch (error) {
-      statusEl.textContent = "Unable to send right now. Please email hello@bluehavenbrands.com or retry in a moment.";
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = defaultLabel;
-    }
+      setFaqState(item, !isExpanded);
+    });
   });
-})();
+}
+
+function setFaqState(item, expand) {
+  const button = item.querySelector(".faq__question");
+  const answer = item.querySelector(".faq__answer");
+  const icon = button?.querySelector(".faq__icon");
+  if (!button || !answer) return;
+
+  button.setAttribute("aria-expanded", expand ? "true" : "false");
+  item.classList.toggle("is-open", expand);
+  answer.hidden = !expand;
+  if (icon) {
+    icon.textContent = expand ? "−" : "+";
+  }
+}
+
+function initSmoothScroll() {
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.getAttribute("href");
+      if (!targetId || targetId === "#") return;
+
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      event.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      link.blur();
+    });
+  });
+}
