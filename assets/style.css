@@ -76,6 +76,14 @@ h3 {
   font-weight: 500;
 }
 
+.mobile_hide {
+    display: unset!important;
+}
+
+.desktop_hide {
+    display: none!important;
+}
+
 .container {
   width: min(1100px, 92vw);
   margin: 0 auto;
@@ -597,8 +605,8 @@ textarea:focus {
   }
 
   .hero__collage-card--main {
-    inset: 5% auto auto -40%;
-    min-width: 1000px;
+    inset: 5% auto auto -45%;
+    min-width: 1100px;
   }
 
   .influencer__media {
@@ -692,6 +700,12 @@ textarea:focus {
 }
 
 @media (max-width: 720px) {
+  .mobile_hide {
+    display: none!important;
+  }
+  .desktop_hide {
+      display: unset!important;
+  }
   .section {
     padding: 3.5rem 0;
   }
@@ -704,28 +718,17 @@ textarea:focus {
     width: min(440px, 90vw);
   }
 
-  .hero__collage-card--main {
-    inset: 10% auto auto -20%;
-    min-width: 70vw;
-  }
-
-  .influencer__image {
-    position: static;
-    inset: auto;
-    width: 100%;
-    min-width: 0;
-  }
-
-  /* .influencer__image {
-    inset: -15% auto auto -68%;
-    min-width: 1300px;
-    z-index: -1;
-    position: absolute;
-} */
-
   .influencer__media {
     width: min(360px, 100%);
   }
+
+
+  .influencer__image {
+      inset: auto;
+      position: unset;
+      min-width: 100vw;
+      max-width: 100vw;
+}
 
   .contact__form {
     grid-template-columns: 1fr;
@@ -788,8 +791,8 @@ textarea:focus {
   }
 
   .hero__collage-card--main {
-    inset: -88% auto auto -38%;
-    min-width: calc(100vw + 213px)
+    inset: -76% auto auto -11%;
+    min-width: calc(100vw + 30px);
   }
 
   .hero__collage-card--stat {
