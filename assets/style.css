@@ -76,21 +76,13 @@ h3 {
   font-weight: 500;
 }
 
-.mobile_hide {
-    display: unset!important;
-}
-
-.desktop_hide {
-    display: none!important;
-}
-
 .container {
   width: min(1100px, 92vw);
   margin: 0 auto;
 }
 
 .section {
-  padding: 96px 0;
+  padding: 50px 0;
 }
 
 .section--light {
@@ -132,18 +124,17 @@ h3 {
 .btn-primary {
   background: var(--color-primary);
   color: #ffffff;
-  box-shadow: -3px 7px 18px 0px rgba(0, 136, 255, 0.28);
 }
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
   transform: translateY(-3px);
-  box-shadow: -3px 7px 18px 0px rgba(0, 136, 255, 0.32);
+  box-shadow: -3px 7px 8px 0px rgba(0, 136, 255, 0.2);
 }
 
 .btn-primary:active {
   transform: translateY(0);
-  box-shadow: -3px 7px 18px 0px rgba(0, 136, 255, 0.2);
+  box-shadow: -3px 7px 8px 0px rgba(0, 136, 255, 0.2);
 }
 
 /* Hero */
@@ -156,12 +147,13 @@ h3 {
 .hero__container {
   display: flex;
   align-items: center;
-  gap: 72px;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .hero__content {
   position: relative;
-  min-width: 500px;
+  flex: 1 1 320px;
   max-width: 500px;
   z-index: 1;
 }
@@ -177,36 +169,16 @@ h3 {
 }
 
 .hero__visual {
-  flex: 1;
+  flex: 1 1 320px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.hero__collage {
-  position: relative;
-  width: min(520px, 100%);
-  aspect-ratio: 1 / 1;
-}
-
-.hero__collage-card {
-  position: absolute;
-}
-
-.hero__collage-card--main {
-    inset: 0% auto auto -73%;
-    min-width: 80vw;
-    z-index: 2;
-}
-
-.hero__collage-card--stat {
-  inset: auto -6% 16% auto;
-  width: 46%;
-  transform: rotate(6deg);
-  z-index: 3;
-}
-
-.hero__collage img {
+.hero__media {
   display: block;
+  width: 100%;
+  max-width: 520px;
 }
 
 /* Partnership section */
@@ -238,25 +210,30 @@ h3 {
 .influencer {
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 64px;
 }
 
 .influencer__media {
-  flex: 0 0 50%;
-  position: relative;
-  height: 700px;
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.influencer__picture {
+  display: block;
+  width: 100%;
+  max-width: 520px;
 }
 
 .influencer__image {
-  position: absolute;
-  inset: 20% auto auto -12%;
-  min-width: calc(100vw);
+  width: 100%;
+  height: auto;
 }
 
 .influencer__content {
-  flex: 0 0 50%;
+  flex: 1 1 50%;
   max-width: 370px;
-  margin: -150px 0px 0px -50px;
+  margin: 0;
 }
 
 .influencer__content p {
@@ -339,6 +316,8 @@ h3 {
 /* Testimonials */
 #testimonials {
   background: #f9f9fa;
+  padding: 85px 50px;
+  margin: 50px 0px;
 }
 
 .brand-showcase {
@@ -585,42 +564,22 @@ textarea:focus {
 }
 
 @media (min-width: 1200px) {
-  .hero__collage {
-    width: clamp(560px, 46vw, 640px);
+  .hero__media {
+    max-width: clamp(560px, 46vw, 640px);
   }
 
-  .hero__collage-card--main {
-    inset: 5% auto auto -45%;
-    min-width: 1100px;
-  }
-
-  .influencer__media {
-    height: 640px;
-  }
-
-  .influencer__image {
-    inset: -18% auto auto -75%;
-    min-width: 1500px;
+  .influencer__picture {
+    max-width: clamp(540px, 42vw, 640px);
   }
 }
 
 @media (min-width: 1500px) {
-  .hero__collage {
-    width: clamp(560px, 46vw, 640px);
+  .hero__media {
+    max-width: clamp(600px, 42vw, 700px);
   }
 
-  .hero__collage-card--main {
-    inset: 5% auto auto -40%;
-    min-width: 1080px;
-  }
-
-  .influencer__media {
-    height: 640px;
-  }
-
-  .influencer__image {
-    inset: -18% auto auto -83%;
-    min-width: 1500px;
+  .influencer__picture {
+    max-width: clamp(580px, 40vw, 700px);
   }
 }
 
@@ -650,13 +609,8 @@ textarea:focus {
     margin: 0 auto;
   }
 
-  .hero__collage {
-    width: min(500px, 88vw);
-  }
-
-  .hero__collage-card--main {
-    inset: 10% auto auto -20%;
-    min-width: 850px;
+  .hero__media {
+    max-width: min(520px, 88vw);
   }
 
   .feature-grid {
@@ -666,14 +620,19 @@ textarea:focus {
   .influencer {
     flex-direction: column;
     text-align: center;
-    gap: 50px;
+    gap: 48px;
   }
 
-  .influencer__media {
-    width: min(420px, 90vw);
-    height: auto;
+  .influencer__media,
+  .influencer__content {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
   }
 
+  .influencer__content {
+    margin: 0;
+  }
 
   .contact__form {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -685,33 +644,24 @@ textarea:focus {
 }
 
 @media (max-width: 720px) {
-  .mobile_hide {
-    display: none!important;
-  }
-  .desktop_hide {
-      display: unset!important;
-  }
   .section {
-    padding: 56px 0;
+    padding: 25px 0;
   }
 
   .feature-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero__collage {
-    width: min(440px, 90vw);
+  .hero__media,
+  .influencer__picture {
+    max-width: 100%;
   }
 
-  .influencer__media {
-    width: min(360px, 100%);
+  .influencer {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 5px;
   }
-
-  .influencer__image {
-      inset: 0% auto auto 0%;
-      position: absolute;
-      min-width: 100vw;
-}
 
   .contact__form {
     grid-template-columns: 1fr;
@@ -738,11 +688,23 @@ textarea:focus {
   .footer__contact {
     align-items: center;
   }
+
+  #testimonials {
+    padding: 50px 0px;
+    margin: 20px 0px;
+}
+
+  .testimonial {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0 auto;
+    line-height: 1.5;
+    padding: 0px 20px;
+}
+
 }
 
 @media (max-width: 520px) {
-
-
   h1 {
     font-size: 40px;
     margin-bottom: 10px;
@@ -762,10 +724,7 @@ textarea:focus {
 
   .hero {
     padding-top: 15px;
-  }
-
-  .hero__collage {
-    height: 270px;
+    padding-bottom: 0px;
   }
 
   .hero__content {
@@ -773,26 +732,12 @@ textarea:focus {
       max-width: unset;
   }
 
-  .hero__collage-card--main {
-    inset: -32% auto auto -11%;
-    min-width: calc(100vw + 30px);
-  }
-
-  .hero__collage-card--stat {
-    inset: auto -6% 10% auto;
-    width: 62%;
-  }
-
-  .influencer {
-    flex-direction: column-reverse;
-  }
-
-  .influencer__media {
-    min-height: 700px;
-  }
-
   .influencer__content {
     margin: 0px;
+    max-width: 100%;
+  }
+  .influencer__media {
+    max-width: 100%;
   }
   .faq__question {
     align-items: flex-start;
@@ -811,4 +756,9 @@ textarea:focus {
   .logo-row img {
     max-height: 28px;
   }
+
+  .feature-card__icon {
+  width: 75px;
+}
+
 }

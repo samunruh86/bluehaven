@@ -34,18 +34,16 @@
           <a class="btn btn-primary" href="#contact">Let's Connect</a>
         </div>
         <div class="hero__visual">
-          <div class="hero__collage">
+          <picture class="hero__media">
+            <source
+              srcset="assets/media/hero-small.png"
+              media="(max-width: 720px)"
+            />
             <img
-              class="hero__collage-card hero__collage-card--main mobile_hide"
               src="assets/media/hero-large.png"
               alt="Amazon product cards collage"
             />
-            <img
-              class="hero__collage-card hero__collage-card--main desktop_hide"
-              src="assets/media/hero-small.png"
-              alt="Amazon product cards collage"
-            />
-          </div>
+          </picture>
         </div>
       </div>
     </header>
@@ -107,16 +105,17 @@
       <section id="influencer" class="section">
         <div class="container influencer">
           <div class="influencer__media">
-            <img
-              src="assets/media/social-large.png"
-              alt="Content creator featured on a mobile phone mockup"
-              class="influencer__image mobile_hide"
-            />
-            <img
-              src="assets/media/social-small.png"
-              alt="Content creator featured on a mobile phone mockup"
-              class="influencer__image desktop_hide"
-            />
+            <picture class="influencer__picture">
+              <source
+                srcset="assets/media/social-small.png"
+                media="(max-width: 720px)"
+              />
+              <img
+                src="assets/media/social-large.png"
+                alt="Content creator featured on a mobile phone mockup"
+                class="influencer__image"
+              />
+            </picture>
           </div>
           <div class="influencer__content">
             <h2>We love helping brands get seen.</h2>
