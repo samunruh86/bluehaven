@@ -248,10 +248,9 @@ h3 {
 }
 
 .influencer__image {
-    inset: -15% auto auto -68%;
-    min-width: 1300px;
-    z-index: -1;
-    position: absolute;
+  position: absolute;
+  inset: 20% auto auto -12%;
+  min-width: calc(100vw);
 }
 
 .influencer__content {
@@ -708,12 +707,10 @@ textarea:focus {
     width: min(360px, 100%);
   }
 
-
   .influencer__image {
-      inset: auto;
-      position: unset;
+      inset: 0% auto auto 0%;
+      position: absolute;
       min-width: 100vw;
-      max-width: 100vw;
 }
 
   .contact__form {
@@ -768,7 +765,7 @@ textarea:focus {
   }
 
   .hero__collage {
-    height: 100px;
+    height: 270px;
   }
 
   .hero__content {
@@ -777,7 +774,7 @@ textarea:focus {
   }
 
   .hero__collage-card--main {
-    inset: -76% auto auto -11%;
+    inset: -32% auto auto -11%;
     min-width: calc(100vw + 30px);
   }
 
@@ -786,18 +783,24 @@ textarea:focus {
     width: 62%;
   }
 
-  .influencer__media {
-    width: min(320px, 100%);
+  .influencer {
+    flex-direction: column-reverse;
   }
 
+  .influencer__media {
+    min-height: 700px;
+  }
+
+  .influencer__content {
+    margin: 0px;
+  }
   .faq__question {
-    flex-direction: column;
     align-items: flex-start;
-    gap: 9.6px;
+    gap: 10px;
   }
 
   .brand-showcase {
-    gap: 35.2px;
+    gap: 35px;
   }
 
   .testimonial::before {
