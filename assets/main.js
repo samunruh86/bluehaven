@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   initFaqAccordion();
   initSmoothScroll();
+  initContactForm();
 });
 
 function initFaqAccordion() {
@@ -53,4 +54,68 @@ function initSmoothScroll() {
       link.blur();
     });
   });
+}
+
+function initContactForm() {
+  const form = document.querySelector(".contact__form");
+  if (!form) return;
+
+  const statusEl = form.querySelector(".form__status");
+  const submitButton = form.querySelector(".form__submit");
+  const defaultButtonText = submitButton?.textContent ?? "";
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    updateStatus("");
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+    }
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/sam@bluehavenbrands.com", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const isSuccess = data.success === "true" || data.success === true;
+
+      if (!isSuccess) {
+        throw new Error(data.message || "Submission failed");
+      }
+
+      form.reset();
+      updateStatus("Your message has been submitted.", "success");
+    } catch (error) {
+      updateStatus("Something went wrong. Please try again or email sam@bluehavenbrands.com.", "error");
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = defaultButtonText;
+      }
+    }
+  });
+
+  function updateStatus(message, state) {
+    if (!statusEl) return;
+
+    statusEl.textContent = message;
+    statusEl.classList.remove("form__status--success", "form__status--error");
+
+    if (state) {
+      statusEl.classList.add(`form__status--${state}`);
+    }
+  }
 }

@@ -458,6 +458,22 @@ textarea:focus {
   padding: 15.2px 44.8px;
 }
 
+.form__status {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-muted);
+  min-height: 20px;
+}
+
+.form__status--success {
+  color: #1a7f37;
+}
+
+.form__status--error {
+  color: #c0392b;
+}
+
 
 
 .contact__phone {
