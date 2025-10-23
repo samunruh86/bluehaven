@@ -2980,13 +2980,6 @@ label {
   opacity: 1;
   transform: translateY(0);
 }
-.hover-accordon5_component .accordion5_row:hover {
-  box-shadow: 0 20px 45px -30px rgba(12, 19, 38, 0.35);
-}
-.hover-accordon5_component .accordion5_row.active {
-  box-shadow: 0 24px 60px -32px rgba(12, 19, 38, 0.45);
-  background-color: transparent;
-}
 
 .accordion.accordion__style2 .accordion__block.active {
   background: linear-gradient(
