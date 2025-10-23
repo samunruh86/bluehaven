@@ -343,17 +343,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const title = block.querySelector('.accordion__title');
       const content = block.querySelector('.accordion__content');
       if (!title || !content) return;
-      content.style.display = block.classList.contains('active') ? 'block' : 'none';
+      const blockIsActive = block.classList.contains('active');
+      content.style.display = blockIsActive ? 'block' : 'none';
+      title.classList.toggle('active', blockIsActive);
       title.addEventListener('click', () => {
         const isActive = block.classList.contains('active');
         accordion.querySelectorAll('.accordion__block').forEach((other) => {
           other.classList.remove('active');
           const otherContent = other.querySelector('.accordion__content');
+          const otherTitle = other.querySelector('.accordion__title');
           if (otherContent) otherContent.style.display = 'none';
+          if (otherTitle) otherTitle.classList.remove('active');
         });
         if (!isActive) {
           block.classList.add('active');
           content.style.display = 'block';
+          title.classList.add('active');
         }
       });
     });
