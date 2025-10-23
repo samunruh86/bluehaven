@@ -42,9 +42,11 @@
 ## **Service Suite**
 - Section Label: "Our Service Suite"
 - Section Headline: “Smart Solutions for Real Growth”
-- Service: "Strategy & Consulting" — “We help brands plan for clarity and control. From pricing and compliance to channel planning and brand health, we develop practical strategies that turn complexity into confidence.”
-- Service: "Marketing & Creative" — “We combine design and data to make your listings work harder. From optimization and advertising to content creation, our goal is simple: help your brand sell more, more consistently.”
-- Service: "Reselling & Fulfillment" — “Partner with us as your authorized marketplace reseller. We handle listings, pricing, and logistics with full transparency, keeping your brand protected while driving sustainable growth.”
+- Service: "Agency Services" — “We create content and advertising strategies built for real-world results. From listing optimization to PPC management, our goal is simple: help your brand sell more, more consistently.”
+- Service: "Reselling Services" — “Partner with us as your authorized marketplace reseller. We’ll manage your catalog, pricing, and promotions while keeping your brand integrity intact.”
+- Service: "Logistics Services" — “We coordinate storage, FBA prep, and fulfillment with reliable partners, ensuring your products move smoothly from warehouse to customer.”
+- Service: "Marketplace Partnerships" — “Expand your reach across Amazon, Walmart, and specialty channels with the help of a partner who knows how to navigate each platform’s rules and opportunities.”
+- Service: "Consulting" — “Need guidance before going all in? Our consulting gives you clear direction on pricing, distribution, and marketplace readiness.”
 - Card Link Text: "Learn More"
 
 ---
@@ -63,37 +65,42 @@
 - Section Label: "HOW WE WORK"
 - Section Headline: “Turning Marketplace Challenges Into Growth Opportunities”
 - Supporting Copy: “At Blue Haven Brands, we believe partnership beats guesswork. We work closely with each brand to simplify operations, protect pricing, and drive sustainable marketplace success—one practical step at a time.”
-
-### **1. Strategy & Consulting**
-- **Headline:** “Clarity Before Growth.”
-- **Overview:** “We help brands see the full marketplace picture—from pricing and distribution to channel compliance and positioning. Our consulting process uncovers what’s holding you back and builds a roadmap for scalable, low-risk growth.”
-- **Subhead:** “Here’s what we’ve helped brands achieve:”
-  - Identified key pricing and compliance gaps  
-  - Developed tailored marketplace playbooks  
-  - Built roadmaps for sustainable, low-risk growth  
-- **CTA Button:** "Explore Our Solutions"
-
----
-
-### **2. Marketing & Creative**
-- **Headline:** “Make Your Listings Work Harder.”
-- **Overview:** “From optimized content to ad strategy, we bring data and design together to strengthen your brand’s digital shelf. Our team refines visuals, copy, and campaigns that drive visibility, conversion, and long-term brand equity.”
-- **Subhead:** “Here’s what we’ve helped brands achieve:”
-  - Improved visibility and search rankings across Amazon  
-  - Higher conversion rates through better content and imagery  
-  - Increased ad efficiency and return on spend  
-- **CTA Button:** "Explore Our Solutions"
-
----
-
-### **3. Reselling & Fulfillment**
-- **Headline:** “A Partner Who Performs—Not Just Sells.”
-- **Overview:** “As your authorized marketplace reseller, we manage listings, pricing, inventory, and fulfillment with full transparency. You keep brand control; we handle the execution that turns consistency into predictable revenue.”
-- **Subhead:** “Here’s what we’ve helped brands achieve:”
-  - Steady sales growth and cleaner marketplace presence  
-  - Reduced price erosion through better control  
-  - Simplified logistics and faster fulfillment cycles  
-- **CTA Button:** "Explore Our Solutions"
+- Tab Labels: "Marketing", "Reselling", "Partnerships", "Logistics", "Consulting"
+- Marketing Tab Headline: “We helped brands strengthen their online presence.”
+- Marketing Tab Overview: “We combine creative storytelling with data-backed insights to craft content and campaigns that get results. From optimized listings to strategic ad management, we focus on long-term brand health.”
+- Marketing Tab Subhead: “Here’s what we’ve helped brands achieve:”
+- Marketing Tab Result: "Improved visibility and search rankings across Amazon"
+- Marketing Tab Result: "Higher conversion rates through better content and imagery"
+- Marketing Tab Result: "Increased ad efficiency and return on spend"
+- Marketing Tab CTA Button: "Explore Our Solutions"
+- Reselling Tab Headline: “We turned reseller partnerships into consistent revenue.”
+- Reselling Tab Overview: “Our hybrid reseller model gives brands the best of both worlds—control and growth. We manage listings, inventory, and pricing while you maintain full transparency.”
+- Reselling Tab Subhead: “Here’s what we’ve helped brands achieve:”
+- Reselling Tab Result: "Steady sales growth and cleaner marketplace presence"
+- Reselling Tab Result: "Reduced price erosion through better control"
+- Reselling Tab Result: "Expanded product visibility across key platforms"
+- Reselling Tab CTA Button: "Explore Our Solutions"
+- Partnerships Tab Headline: “We built partnerships that support long-term brand health.”
+- Partnerships Tab Overview: “We focus on quality relationships, not just channel expansion. Our marketplace partnerships are designed to simplify onboarding and strengthen brand integrity.”
+- Partnerships Tab Subhead: “Here’s what we’ve helped brands achieve:”
+- Partnerships Tab Result: "Secured strategic reseller and channel partnerships"
+- Partnerships Tab Result: "Streamlined onboarding for new marketplaces"
+- Partnerships Tab Result: "Improved catalog performance through proactive management"
+- Partnerships Tab CTA Button: "Explore Our Solutions"
+- Logistics Tab Headline: “We simplified fulfillment and supply chain flow.”
+- Logistics Tab Overview: “We coordinate reliable, transparent logistics so your brand never skips a beat. Whether it’s FBA prep, bundling, or inventory planning—we make operations smoother.”
+- Logistics Tab Subhead: “Here’s what we’ve helped brands achieve:”
+- Logistics Tab Result: "Faster turnaround from order to fulfillment"
+- Logistics Tab Result: "Fewer stockouts and greater inventory accuracy"
+- Logistics Tab Result: "Simplified FBA and multi-channel shipping processes"
+- Logistics Tab CTA Button: "Explore Our Solutions"
+- Consulting Tab Headline: “We delivered insights that unlocked brand growth.”
+- Consulting Tab Overview: “Our consulting process blends experience and data to uncover what’s really holding your brand back—and what’s next for sustainable growth.”
+- Consulting Tab Subhead: “Here’s what we’ve helped brands achieve:”
+- Consulting Tab Result: "Identified key pricing and compliance gaps"
+- Consulting Tab Result: "Developed tailored marketplace playbooks"
+- Consulting Tab Result: "Built roadmaps for scalable, low-risk growth"
+- Consulting Tab CTA Button: "Explore Our Solutions"
 
 ---
 
