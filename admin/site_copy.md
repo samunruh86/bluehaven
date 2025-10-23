@@ -52,10 +52,11 @@
 ## **Marketplace Coverage**
 - Section Headline: “Where We Help Brands Win”
 - Supporting Copy: “We help brands strengthen their presence and performance across leading marketplaces—from initial setup to long-term growth.”
-- Marketplace Card: "Amazon" — “We support brands across Seller and Vendor Central with listing optimization, content improvement, and Brand Registry guidance.”
-- Marketplace Card: "Walmart" — “We help you stand out on Walmart.com through SEO-focused content, compliance support, and strategic expansion planning.”
-- Marketplace Card: "Target Plus" — “For brands pursuing Target Plus, we provide application guidance, listing prep, and catalog management to ensure a smooth onboarding process.”
-- Marketplace Card: "Specialty Platforms" — “From niche marketplaces to category-specific channels, we develop tailored distribution plans that align with your goals and fulfillment capabilities.”
+- Marketplace Card: "eBay" — “We help brands succeed on eBay through optimized listings, pricing strategy, and catalog consistency—building trust and visibility in a competitive marketplace.”
+- Marketplace Card: "Walmart" — “We help you stand out on Walmart.com through SEO-focused content, compliance support, and strategic expansion planning that drives steady sales growth.”
+- Marketplace Card: "Amazon" — “We support brands across Seller and Vendor Central with listing optimization, advertising management, and Brand Registry guidance to protect and grow your presence.”
+- Marketplace Card: "Shopify" — “We assist with direct-to-consumer setup, store optimization, and fulfillment alignment to create a seamless connection between your marketplace and owned channels.”
+- Marketplace Card: "TikTok Shop" — “We help brands expand into TikTok Shop with optimized product listings, influencer collaboration strategies, and creative campaigns designed to convert engagement into sales.”
 
 ---
 
@@ -71,7 +72,6 @@
   - Identified key pricing and compliance gaps  
   - Developed tailored marketplace playbooks  
   - Built roadmaps for sustainable, low-risk growth  
-- **CTA Button:** "Explore Our Solutions"
 
 ---
 
@@ -82,7 +82,6 @@
   - Improved visibility and search rankings across Amazon  
   - Higher conversion rates through better content and imagery  
   - Increased ad efficiency and return on spend  
-- **CTA Button:** "Explore Our Solutions"
 
 ---
 
@@ -93,7 +92,6 @@
   - Steady sales growth and cleaner marketplace presence  
   - Reduced price erosion through better control  
   - Simplified logistics and faster fulfillment cycles  
-- **CTA Button:** "Explore Our Solutions"
 
 ---
 
@@ -118,7 +116,7 @@
 ---
 
 ## **Global CTA Banner**
-- Section Headline: “Let’s Build a Smarter Marketplace Strategy Together”
+- Section Headline: “Let’s Build a Smarter Strategy Together”
 - Supporting Copy: “If you’re tired of messy listings, unauthorized sellers, or unpredictable sales, we’re here to help. Let’s create a clear plan to protect and grow your brand.”
 - Form Label: "Name" — Placeholder: "Your name"
 - Form Label: "Email" — Placeholder: "you@example.com"
@@ -129,7 +127,6 @@
 ---
 
 ## **Footer**
-- Copyright: "© Blue Haven Brands. All rights reserved."
-- Subhead: "Connect"
-- Email: "partners@bluehavenbrands.com"
-- Phone: "1 (888) 642-8898"
+- Copyright: "© 2025 Blue Haven Brands. All rights reserved."
+- Subhead: "Autorized US distribution partner"
+- Address: "11016 Quivira Rd, Overland Park, KS 66210"

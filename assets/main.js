@@ -189,40 +189,96 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.hover-accordon5_component').forEach((component) => {
     const rows = Array.from(component.querySelectorAll('.accordion5_row'));
-    const applyState = (row, active) => {
-      row.classList.toggle('active', active);
+    let currentActive = null;
+    const toggleElement = (element, active, fallbackDisplay = 'block', instantHide = false) => {
+      if (!element) return;
+      const defaultDisplay = element.dataset.defaultDisplay || fallbackDisplay;
+      if (!element.dataset.defaultDisplay) {
+        element.dataset.defaultDisplay = defaultDisplay;
+      }
+      const token = Number(element.dataset.toggleToken || '0') + 1;
+      element.dataset.toggleToken = String(token);
+      const show = () => {
+        element.dataset.toggleState = 'show';
+        element.style.display = element.dataset.defaultDisplay;
+        requestAnimationFrame(() => {
+          element.classList.add('is-visible');
+        });
+      };
+      const hide = () => {
+        element.dataset.toggleState = 'hide';
+        if (instantHide) {
+          element.classList.remove('is-visible');
+          element.style.display = 'none';
+          return;
+        }
+        const handleTransitionEnd = (event) => {
+          if (event.target !== element) return;
+          if (element.dataset.toggleToken !== String(token)) return;
+          element.style.display = 'none';
+        };
+        const startHide = () => {
+          element.addEventListener('transitionend', handleTransitionEnd, { once: true });
+          element.classList.remove('is-visible');
+        };
+        requestAnimationFrame(startHide);
+        setTimeout(() => {
+          if (element.dataset.toggleToken === String(token)) {
+            element.style.display = 'none';
+          }
+        }, 600);
+      };
+      if (active) {
+        show();
+      } else {
+        hide();
+      }
+    };
+    const applyState = (row, isActive, instantHide = false) => {
+      row.classList.toggle('active', isActive);
       row.style.opacity = '1';
       row.style.transform = 'none';
-      const paragraph = row.querySelector('.accordion5_paragraph');
-      const relParent = row.querySelector('.accordion5_rel-parent');
-      const arrowLink = row.querySelector('.services_arrow-link');
-      if (paragraph) {
-        paragraph.style.display = active ? 'block' : 'none';
-        paragraph.style.opacity = active ? '1' : '0';
-        paragraph.style.transform = active ? 'translateY(0)' : 'translateY(25px)';
-      }
-      if (relParent) {
-        relParent.style.display = active ? 'block' : 'none';
-        relParent.style.opacity = active ? '1' : '0';
-        relParent.style.transform = active ? 'scale(1) translateY(0)' : 'scale(0.95) translateY(25px)';
-      }
-      if (arrowLink) {
-        arrowLink.style.display = active ? 'flex' : 'none';
-        arrowLink.style.opacity = active ? '1' : '0';
-        arrowLink.style.maxHeight = active ? '100px' : '0px';
-        arrowLink.style.transform = active ? 'translateY(0)' : 'translateY(25px)';
-      }
+      toggleElement(row.querySelector('.accordion5_paragraph'), isActive, 'block', instantHide);
+      toggleElement(row.querySelector('.accordion5_rel-parent'), isActive, 'block', instantHide);
+      toggleElement(row.querySelector('.services_arrow-link'), isActive, 'flex', instantHide);
     };
-    const setActive = (target) => {
-      rows.forEach((row) => applyState(row, row === target));
+    const activateRow = (target) => {
+      if (!target || target === currentActive) return;
+      applyState(target, true);
+      if (currentActive) {
+        applyState(currentActive, false, true);
+      }
+      currentActive = target;
     };
-    if (rows.length) setActive(rows[0]);
+    const tabsComponents = Array.from(document.querySelectorAll('.basic-tabs_component'));
+    const attachLearnMore = (row) => {
+      const link = row.querySelector('.services_learn-more');
+      const tabTarget = row.dataset.tabTarget || link?.dataset.tabTarget;
+      if (!link) return;
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (tabTarget) {
+          tabsComponents.forEach((tabs) => {
+            tabs.dispatchEvent(new CustomEvent('changeTab', { detail: { tabName: tabTarget } }));
+          });
+        }
+        smoothScroll('#how-we-work');
+      });
+    };
+    if (rows.length) {
+      currentActive = rows[0];
+      applyState(currentActive, true);
+      rows.forEach((row) => {
+        if (row !== currentActive) {
+          applyState(row, false);
+        }
+      });
+    }
     rows.forEach((row) => {
-      row.addEventListener('click', () => setActive(row));
-      row.addEventListener('mouseenter', () => setActive(row));
+      row.addEventListener('click', () => activateRow(row));
+      attachLearnMore(row);
     });
   });
-
 
   document.querySelectorAll('.basic-tabs_component').forEach((tabs) => {
     const links = tabs.querySelectorAll('.w-tab-link');
@@ -231,10 +287,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const setActive = (targetLink) => {
       const targetName = targetLink.getAttribute('data-w-tab');
+      if (targetName) {
+        tabs.setAttribute('data-current', targetName);
+      }
       links.forEach((link) => {
         const isActive = link === targetLink;
         link.classList.toggle('w--current', isActive);
         link.setAttribute('aria-selected', String(isActive));
+        link.setAttribute('tabindex', isActive ? '0' : '-1');
         if (isActive) {
           link.style.opacity = '1';
           link.style.transform = 'none';
@@ -245,6 +305,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const isActive = match === targetName;
         pane.classList.toggle('w--tab-active', isActive);
         pane.style.display = isActive ? 'block' : 'none';
+        pane.setAttribute('aria-hidden', String(!isActive));
+        if (!isActive) {
+          pane.setAttribute('hidden', 'true');
+        } else {
+          pane.removeAttribute('hidden');
+        }
       });
     };
 
@@ -253,6 +319,20 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         setActive(link);
       });
+    });
+
+    tabs.addEventListener('changeTab', (event) => {
+      const tabName = event.detail?.tabName;
+      if (!tabName) return;
+      const targetLink = Array.from(links).find(
+        (link) => link.getAttribute('data-w-tab') === tabName || link.id === tabName,
+      );
+      if (targetLink) {
+        setActive(targetLink);
+        if (typeof targetLink.focus === 'function') {
+          targetLink.focus({ preventScroll: true });
+        }
+      }
     });
 
     setActive(links[0]);

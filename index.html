@@ -47,8 +47,8 @@
           </a>
           <nav role="navigation" class="nav_menu w-nav-menu">
             <a href="#services" class="nav_link w-nav-link" style="max-width: 100%;">Services</a>
-            <a href="#marketplaces" class="nav_link w-nav-link" style="max-width: 100%;">Partnership</a>
-            <a href="#about" class="nav_link w-nav-link" style="max-width: 100%;">About Us</a>
+            <a href="#marketplaces" class="nav_link w-nav-link" style="max-width: 100%;">Coverage</a>
+            <a href="#how-we-work" class="nav_link w-nav-link" style="max-width: 100%;">How We Work</a>
           </nav>
           <div class="nav_cta">
             <div class="button-grup gap-tiny">
@@ -120,7 +120,7 @@
         </div>
         <div data-w-id="79839350-7fac-1531-be41-3e9afc64be67" class="stat-grid_item animate-item" data-animate-delay="0.35">
           <div class="statistic_heading tk-dm-sans centered">
-            <span data-count="1" data-start="10" class="counter count">10</span> Focus</div>
+            <span data-count="1" data-start="100" class="counter count">10</span> Focus</div>
             <div class="text-block-8 centered">Making Marketplace Growth Simple</div>
           </div>
         </div>
@@ -234,209 +234,46 @@
         </div>
       </div>
       <div class="hover-accordon5_component">
-        <div class="w-embed w-script">
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const accordionComponents = document.querySelectorAll(".hover-accordon5_component");
-              const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-              const observer = prefersReducedMotion
-                ? null
-                : new IntersectionObserver(
-                    (entries, obs) => {
-                      entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                          entry.target.classList.add("is-visible");
-                          obs.unobserve(entry.target);
-                        }
-                      });
-                    },
-                    { threshold: 0.2 }
-                  );
-
-              accordionComponents.forEach((component) => {
-                const accordionRows = component.querySelectorAll(".accordion5_row");
-
-                accordionRows.forEach((row, index) => {
-                  if (observer) {
-                    observer.observe(row);
-                  } else {
-                    row.classList.add("is-visible");
-                  }
-
-                  const closeItem = (targetRow) => {
-                    const p = targetRow.querySelector(".accordion5_paragraph");
-                    const relParent = targetRow.querySelector(".accordion5_rel-parent");
-                    const arrowLink = targetRow.querySelector(".services_arrow-link");
-
-                    targetRow.classList.remove("active");
-
-                    if (p) {
-                      p.style.transition = "none";
-                      p.style.opacity = "0";
-                      p.style.transform = "translateY(25px)";
-                      p.style.display = "none";
-                    }
-
-                    if (relParent) {
-                      relParent.style.transition = "none";
-                      relParent.style.opacity = "0";
-                      relParent.style.transform = "scale(0.95) translateY(25px)";
-                      relParent.style.display = "none";
-                    }
-
-                    if (arrowLink) {
-                      arrowLink.style.transition = "none";
-                      arrowLink.style.opacity = "0";
-                      arrowLink.style.maxHeight = "0px";
-                      arrowLink.style.transform = "translateY(25px)";
-                      arrowLink.style.display = "none";
-                    }
-                  };
-
-                  const openItem = (targetRow) => {
-                    const p = targetRow.querySelector(".accordion5_paragraph");
-                    const relParent = targetRow.querySelector(".accordion5_rel-parent");
-                    const arrowLink = targetRow.querySelector(".services_arrow-link");
-
-                    targetRow.classList.add("active");
-                    targetRow.classList.add("is-visible");
-
-                    if (p) {
-                      p.style.display = "block";
-                      p.style.opacity = "0";
-                      p.style.transform = "translateY(25px)";
-                      setTimeout(() => {
-                        p.style.transition = "opacity 0.4s ease, transform 0.4s ease";
-                        p.style.opacity = "1";
-                        p.style.transform = "translateY(0)";
-                      }, 10);
-                    }
-
-                    if (relParent) {
-                      relParent.style.display = "block";
-                      relParent.style.opacity = "0";
-                      relParent.style.transform = "scale(0.95) translateY(25px)";
-                      setTimeout(() => {
-                        relParent.style.transition = "opacity 0.4s ease, transform 0.4s ease";
-                        relParent.style.opacity = "1";
-                        relParent.style.transform = "scale(1) translateY(0)";
-                      }, 10);
-                    }
-
-                    if (arrowLink) {
-                      arrowLink.style.display = "flex";
-                      arrowLink.style.opacity = "0";
-                      arrowLink.style.maxHeight = "0px";
-                      arrowLink.style.transform = "translateY(25px)";
-                      setTimeout(() => {
-                        arrowLink.style.transition = "opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease";
-                        arrowLink.style.opacity = "1";
-                        arrowLink.style.maxHeight = "100px";
-                        arrowLink.style.transform = "translateY(0)";
-                      }, 10);
-                    }
-                  };
-
-                  if (index === 0) {
-                    openItem(row);
-                  } else {
-                    closeItem(row);
-                  }
-
-                  row.addEventListener("click", () => {
-                    const isActive = row.classList.contains("active");
-                    if (isActive) {
-                      return;
-                    }
-
-                    accordionRows.forEach((otherRow) => {
-                      if (otherRow !== row) {
-                        closeItem(otherRow);
-                      }
-                    });
-
-                    openItem(row);
-                  });
-                });
-              });
-            });
-          </script>
-          <style>
-            .accordion5_paragraph {
-              opacity: 0;
-              display: none;
-              transform: translateY(25px);
-              transition: opacity 0.4s ease, transform 0.4s ease;
-            }
-
-            .accordion5_rel-parent {
-              opacity: 0;
-              transform: scale(0.95) translateY(25px);
-              display: none;
-              transition: opacity 0.4s ease, transform 0.4s ease;
-            }
-
-            .services_arrow-link {
-              opacity: 0;
-              display: none;
-              max-height: 0;
-              overflow: hidden;
-              transform: translateY(25px);
-              transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
-            }
-
-            .services_arrow-link:hover > .accordion-5_arrow {
-              transform: translateX(5px);
-              transition: transform 0.3s ease;
-            }
-
-            .services_arrow-link.visible {
-              opacity: 1;
-              transform: translateY(0);
-              max-height: 100px;
-            }
-          </style>
-        </div>
-        <div data-w-id="749a42b1-c3ff-c317-c5e3-4039ae078367" class="accordion5_row first active">
+        <div data-w-id="749a42b1-c3ff-c317-c5e3-4039ae078367" class="accordion5_row first" data-tab-target="Tab 1">
           <div class="div-block-3">
             <h4 class="accordion5_heading">Strategy &amp; Consulting</h4>
-            <p class="accordion5_paragraph" style="display: block; opacity: 1; transform: translateY(0px); transition: opacity 0.4s, transform 0.4s;">We help brands plan for clarity and control. From pricing and compliance to channel planning and brand health, we develop practical strategies that turn complexity into confidence.</p>
+            <p class="accordion5_paragraph">We help brands plan for clarity and control. From pricing and compliance to channel planning and brand health, we develop practical strategies that turn complexity into confidence.</p>
           </div>
-          <div class="accordion5_rel-parent" style="display: block; opacity: 1; transform: scale(1) translateY(0px); transition: opacity 0.4s, transform 0.4s;">
+          <div class="accordion5_rel-parent">
             <img src="assets/media/full-accordion-strategy.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" srcset="assets/media/small-accordion-strategy.jpg 768w, assets/media/full-accordion-strategy.jpg 1600w" alt="" class="accordion5_img">
           </div>
-          <a href="#services" class="w-inline-block">
-            <div class="services_arrow-link" style="display: flex; opacity: 1; max-height: 100px; transform: translateY(0px); transition: opacity 0.4s, max-height 0.4s, transform 0.4s;">
+          <a href="#how-we-work" class="w-inline-block services_learn-more" data-tab-target="Tab 1">
+            <div class="services_arrow-link">
               <div class="accordion5_readmore-text">Learn More</div>
               <img src="assets/media/arrow_right.png" loading="lazy" alt="" class="accordion-5_arrow">
             </div>
           </a>
         </div>
-        <div data-w-id="749a42b1-c3ff-c317-c5e3-4039ae078373" class="accordion5_row">
+        <div data-w-id="749a42b1-c3ff-c317-c5e3-4039ae078373" class="accordion5_row" data-tab-target="Tab 2">
           <div class="div-block-22">
             <h4 class="accordion5_heading">Marketing &amp; Creative</h4>
-            <p class="accordion5_paragraph" style="transition: none; opacity: 0; transform: translateY(25px); display: none;">We combine design and data to make your listings work harder. From optimization and advertising to content creation, our goal is simple: help your brand sell more, more consistently.</p>
+            <p class="accordion5_paragraph">We combine design and data to make your listings work harder. From optimization and advertising to content creation, our goal is simple: help your brand sell more, more consistently.</p>
           </div>
-          <div class="accordion5_rel-parent" style="transition: none; opacity: 0; transform: scale(0.95) translateY(25px); display: none;">
+          <div class="accordion5_rel-parent">
             <img src="assets/media/full-accordion-marketing.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" srcset="assets/media/small-accordion-marketing.jpg 768w, assets/media/full-accordion-marketing.jpg 1600w" alt="" class="accordion5_img">
           </div>
-          <a href="#services" class="w-inline-block">
-            <div class="services_arrow-link" style="transition: none; opacity: 0; max-height: 0px; transform: translateY(25px); display: none;">
+          <a href="#how-we-work" class="w-inline-block services_learn-more" data-tab-target="Tab 2">
+            <div class="services_arrow-link">
               <div class="accordion5_readmore-text">Learn More</div>
               <img src="assets/media/arrow_right.png" loading="lazy" alt="" class="accordion-5_arrow">
             </div>
           </a>
         </div>
-        <div data-w-id="749a42b1-c3ff-c317-c5e3-4039ae07837f" class="accordion5_row">
+        <div data-w-id="749a42b1-c3ff-c317-c5e3-4039ae07837f" class="accordion5_row" data-tab-target="Tab 3">
           <div class="div-block-23">
             <h4 class="accordion5_heading">Reselling &amp; Fulfillment</h4>
-            <p class="accordion5_paragraph" style="transition: none; opacity: 0; transform: translateY(25px); display: none;">Partner with us as your authorized marketplace reseller. We handle listings, pricing, and logistics with full transparency, keeping your brand protected while driving sustainable growth.</p>
+            <p class="accordion5_paragraph">Partner with us as your authorized marketplace reseller. We handle listings, pricing, and logistics with full transparency, keeping your brand protected while driving sustainable growth.</p>
           </div>
-          <div class="accordion5_rel-parent" style="transition: none; opacity: 0; transform: scale(0.95) translateY(25px); display: none;">
+          <div class="accordion5_rel-parent">
             <img src="assets/media/full-accordion-reselling.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" srcset="assets/media/small-accordion-reselling.jpg 768w, assets/media/full-accordion-reselling.jpg 1600w" alt="" class="accordion5_img">
           </div>
-          <a href="#services" class="w-inline-block">
-            <div class="services_arrow-link" style="transition: none; opacity: 0; max-height: 0px; transform: translateY(25px); display: none;">
+          <a href="#how-we-work" class="w-inline-block services_learn-more" data-tab-target="Tab 3">
+            <div class="services_arrow-link">
               <div class="accordion5_readmore-text">Learn More</div>
               <img src="assets/media/arrow_right.png" loading="lazy" alt="" class="accordion-5_arrow">
             </div>
@@ -457,20 +294,24 @@
     </div>
     <div class="marketplaces_grid">
       <article class="marketplace_card animate-item" data-animate-delay="0.2">
-        <h3>Amazon</h3>
-        <p>We support brands across Seller and Vendor Central with listing optimization, content improvement, and Brand Registry guidance.</p>
+        <img src="assets/media/marketplace-ebay.svg" alt="eBay" loading="lazy" class="marketplace_icon">
+        <p>We help brands succeed on eBay through optimized listings, pricing strategy, and catalog consistency—building trust and visibility in a competitive marketplace.</p>
       </article>
       <article class="marketplace_card animate-item" data-animate-delay="0.3">
-        <h3>Walmart</h3>
-        <p>We help you stand out on Walmart.com through SEO-focused content, compliance support, and strategic expansion planning.</p>
+        <img src="assets/media/marketplace-walmart.svg" alt="Walmart" loading="lazy" class="marketplace_icon">
+        <p>We help you stand out on Walmart.com through SEO-focused content, compliance support, and strategic expansion planning that drives steady sales growth.</p>
       </article>
       <article class="marketplace_card animate-item" data-animate-delay="0.4">
-        <h3>Target Plus</h3>
-        <p>For brands pursuing Target Plus, we provide application guidance, listing prep, and catalog management to ensure a smooth onboarding process.</p>
+        <img src="assets/media/marketplace-amazon.svg" alt="Amazon" loading="lazy" class="marketplace_icon">
+        <p>We support brands across Seller and Vendor Central with listing optimization, advertising management, and Brand Registry guidance to protect and grow your presence.</p>
       </article>
       <article class="marketplace_card animate-item" data-animate-delay="0.5">
-        <h3>Specialty Platforms</h3>
-        <p>From niche marketplaces to category-specific channels, we develop tailored distribution plans that align with your goals and fulfillment capabilities.</p>
+        <img src="assets/media/marketplace-shopify.svg" alt="Shopify" loading="lazy" class="marketplace_icon">
+        <p>We assist with direct-to-consumer setup, store optimization, and fulfillment alignment to create a seamless connection between your marketplace and owned channels.</p>
+      </article>
+      <article class="marketplace_card animate-item" data-animate-delay="0.6">
+        <img src="assets/media/marketplace-tiktok.svg" alt="TikTok Shop" loading="lazy" class="marketplace_icon">
+        <p>We help brands expand into TikTok Shop with optimized product listings, influencer collaboration strategies, and creative campaigns designed to convert engagement into sales.</p>
       </article>
     </div>
   </div>
@@ -553,9 +394,6 @@
                 </div>
                 <div class="spacer_large">
                 </div>
-                <div class="button-group">
-                  <a href="#services" class="btn font-weight-bold btn-primary w-button">Explore Our Solutions</a>
-                </div>
               </div>
               <div id="w-node-f08d5887-0453-0dab-01d0-f104726a9773-335f0614" class="col">
                 <img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px" srcset="assets/media/small-tab-strategy.jpg 768w, assets/media/full-tab-strategy.jpg 1600w" alt="" src="assets/media/full-tab-strategy.jpg" loading="lazy" class="_w-100 h-100">
@@ -596,9 +434,6 @@
                 </div>
                 <div class="spacer_large">
                 </div>
-                <div class="button-group">
-                  <a href="#services" class="btn font-weight-bold btn-primary w-button">Explore Our Solutions</a>
-                </div>
               </div>
               <div id="w-node-_45b103ce-552b-7db1-ca34-86dd531a6bb4-335f0614" class="col">
                 <img sizes="100vw" srcset="assets/media/small-tab-marketing.jpg 768w, assets/media/full-tab-marketing.jpg 1600w" alt="" src="assets/media/full-tab-marketing.jpg" loading="lazy" class="_w-100 h-100">
@@ -638,9 +473,6 @@
                   <p class="paragraph-22">Simplified logistics and faster fulfillment cycles</p>
                 </div>
                 <div class="spacer_large">
-                </div>
-                <div class="button-group">
-                  <a href="#services" class="btn font-weight-bold btn-primary w-button">Explore Our Solutions</a>
                 </div>
               </div>
               <div id="w-node-ee60e165-aaa0-9c80-1035-00d8a3f89819-335f0614" class="col">
@@ -718,7 +550,7 @@
     <div class="cta_banner">
       <div class="cta-col_left col1">
         <div class="w-layout-blockcontainer maxwidth_large w-container">
-          <h2 data-w-id="a4a7a59b-625b-ce29-2077-b1746d8b20cb" class="text-color-light h2-heading-style cta-heading">Let’s Build a Smarter Marketplace Strategy <strong>Together</strong>
+          <h2 data-w-id="a4a7a59b-625b-ce29-2077-b1746d8b20cb" class="text-color-light h2-heading-style cta-heading">Let’s Build a Smarter Strategy <strong>Together</strong>
           </h2>
           <p class="text-color-light cta_description">If you’re tired of messy listings, unauthorized sellers, or unpredictable sales, we’re here to help. Let’s create a clear plan to protect and grow your brand.</p>
         </div>
@@ -735,7 +567,7 @@
             <label for="cta-email">Email</label>
             <input id="cta-email" name="email" type="email" placeholder="you@example.com" required>
           </div>
-          <div class="cta_field">
+          <div class="cta_field cta_field--wide">
             <label for="cta-company">Company</label>
             <input id="cta-company" name="company" type="text" placeholder="Brand or organization">
           </div>
@@ -766,7 +598,6 @@
         </div>
         <div class="col footer-col last">
           <p><strong>Autorized US distribution partner</strong></p>
-          <a href="mailto:partners@bluehavenbrands.com" class="footer2_link">partners@bluehavenbrands.com</a>
           <div class="footer_address">11016 Quivira Rd, Overland Park, KS 66210</div>
         </div>
       </div>
