@@ -1,4 +1,3 @@
-
 const resetWebflowStyles = () => {
   document.querySelectorAll('[data-w-id]').forEach((el) => {
     const style = el.getAttribute('style');
@@ -10,139 +9,6 @@ const resetWebflowStyles = () => {
       el.style.transform = 'none';
     }
   });
-};
-
-
-const initHeroVideo = () => {
-  const wrapper = document.querySelector('.custom-video-wrapper');
-  const playBtn = document.querySelector('.custom-play-button');
-  const soundIcon = document.querySelector('.custom-sound-icon');
-  const container = document.getElementById('vimeo-player');
-  if (!wrapper || !container) return;
-
-  const VIDEO_ID = '1096635353';
-  const isSmallScreen = window.matchMedia('(max-width: 767.98px)').matches;
-  const LOCAL_BG_SRC = 'assets/media/hero-mobile-background.mp4';
-  const DESKTOP_SRC = `https://player.vimeo.com/video/${VIDEO_ID}?autoplay=1&muted=1&controls=0&playsinline=1`;
-  const MOBILE_SRC = `https://player.vimeo.com/video/${VIDEO_ID}?autoplay=1&muted=0&controls=1&autopause=0&playsinline=1#t=0s`;
-
-  let player = null;
-  let hasInteracted = false;
-  let isPlaying = false;
-  let bgVideo = null;
-
-  const makeIframe = (src) => {
-    const iframe = document.createElement('iframe');
-    iframe.src = src;
-    iframe.setAttribute('frameborder', '0');
-    iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture; encrypted-media');
-    iframe.setAttribute('allowfullscreen', 'true');
-    return iframe;
-  };
-
-  const resizeIframe = (iframe) => {
-    if (!iframe) return;
-    const ratio = 16 / 9;
-    const width = wrapper.offsetWidth;
-    const height = wrapper.offsetHeight;
-    if (width / height > ratio) {
-      iframe.style.width = `${width}px`;
-      iframe.style.height = `${width / ratio}px`;
-    } else {
-      iframe.style.height = `${height}px`;
-      iframe.style.width = `${height * ratio}px`;
-    }
-  };
-
-  const loadVimeo = (src) => {
-    container.innerHTML = '';
-    const iframe = makeIframe(src);
-    container.appendChild(iframe);
-    resizeIframe(iframe);
-    window.addEventListener('resize', () => resizeIframe(iframe));
-    player = new Vimeo.Player(iframe);
-    player.play().catch(() => {});
-    return iframe;
-  };
-
-  const swapToInteractiveVideo = () => {
-    container.innerHTML = '';
-    const iframe = makeIframe(MOBILE_SRC);
-    iframe.onload = () => {
-      player = new Vimeo.Player(iframe);
-      player.setCurrentTime(0).then(() => player.setMuted(false)).then(() => player.setVolume(1)).then(() => player.play()).catch(() => {});
-      wrapper.classList.add('allow-controls', 'controls-mode');
-      playBtn?.classList.add('hidden');
-      soundIcon?.classList.add('hidden');
-    };
-    container.appendChild(iframe);
-    resizeIframe(iframe);
-    window.addEventListener('resize', () => resizeIframe(iframe));
-  };
-
-  const loadBackgroundVideo = () => {
-    bgVideo = document.createElement('video');
-    bgVideo.className = 'bg-video';
-    bgVideo.playsInline = true;
-    bgVideo.muted = true;
-    bgVideo.autoplay = true;
-    bgVideo.loop = true;
-    bgVideo.preload = 'auto';
-    const source = document.createElement('source');
-    source.src = LOCAL_BG_SRC;
-    source.type = 'video/mp4';
-    bgVideo.appendChild(source);
-    wrapper.appendChild(bgVideo);
-    bgVideo.play().catch(() => {});
-  };
-
-  if (isSmallScreen) {
-    loadBackgroundVideo();
-  } else {
-    const script = document.createElement('script');
-    script.src = 'https://player.vimeo.com/api/player.js';
-    script.onload = () => loadVimeo(DESKTOP_SRC);
-    document.head.appendChild(script);
-  }
-
-  const handleInteraction = async () => {
-    if (!hasInteracted && isSmallScreen) {
-      hasInteracted = true;
-      const script = document.createElement('script');
-      script.src = 'https://player.vimeo.com/api/player.js';
-      script.onload = swapToInteractiveVideo;
-      document.head.appendChild(script);
-      return;
-    }
-    if (!player) return;
-    if (!hasInteracted) {
-      hasInteracted = true;
-      playBtn?.classList.add('hidden');
-      soundIcon?.classList.add('hidden');
-      try {
-        await player.setCurrentTime(0);
-        await player.setMuted(false);
-        await player.setVolume(1);
-        await player.play();
-        isPlaying = true;
-        wrapper.classList.add('allow-controls');
-      } catch (error) {
-        swapToInteractiveVideo();
-      }
-    } else {
-      if (isPlaying) {
-        await player.pause();
-        isPlaying = false;
-        playBtn?.classList.remove('hidden');
-      } else {
-        await player.play();
-        isPlaying = true;
-        playBtn?.classList.add('hidden');
-      }
-    }
-  };
-
-  wrapper.addEventListener('click', handleInteraction);
 };
 
 const smoothScroll = (targetId) => {
@@ -213,7 +79,6 @@ const initCtaForm = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  initHeroVideo();
   resetWebflowStyles();
   initCtaForm();
   const navMenu = document.querySelector('.nav_menu');
