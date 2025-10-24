@@ -8,7 +8,7 @@
 - Lead with rapport. Open every conversation with genuine curiosity before moving into business.
 - Sound human. Treat the frameworks here as guardrails and adapt them to the person in front of you.
 - Stay flexible. Listen for buying signals, objections, or new information and adjust in real time.
-- Act like a partner. Position [YOUR_COMPANY] as a long-term ally who grows sales, protects brand integrity, and communicates clearly.
+- Act like a partner. Position [U_COMPANY] as a long-term ally who grows sales, protects brand integrity, and communicates clearly.
 
 ---
 
@@ -23,7 +23,7 @@ Before emailing or calling, gather proof that you add value:
 ---
 
 ## 3. Value Propositions to Highlight
-Reference these throughout emails and calls to demonstrate why partnering with [YOUR_COMPANY] is different:
+Reference these throughout emails and calls to demonstrate why partnering with [U_COMPANY] is different:
 - Proven sales performance: [Enter yearly revenue] across the US, Canada, and Mexico with monthly purchasing volumes exceeding [Enter purchasing volume].
 - Dedicated reinvestment: 5–20% of profits cycled into brand-specific advertising to expand visibility and velocity.
 - Expert listing management: keyword research, PPC strategy, A+ Content, creative asset refreshes, and growth on marketplaces beyond Amazon (Walmart, eBay, Shopify).
@@ -50,7 +50,7 @@ Reference these throughout emails and calls to demonstrate why partnering with [
 Use this structure for both brand and distributor calls; tailor the proof points to the audience.
 
 - *Warm Opening*  
-  “Hi [FIRST_NAME], this is [YOUR_NAME] with [YOUR_COMPANY]. Appreciate you taking the time—how’s your day going so far?”
+  “Hi [C_FNAME], this is [C_FNAME] [C_LNAME] with [U_COMPANY]. Appreciate you taking the time—how’s your day going so far?”
 
 - *Context & Credibility*  
   “We’re a wholesale, distribution, and e-commerce retailer focused on elevating brand performance across Amazon and other marketplaces. We currently manage [Enter yearly revenue] in annual sales and reinvest 5–20% back into advertising for the brands we represent.”
@@ -78,11 +78,11 @@ Customize every template with specific brand, distributor, and product insights.
 
 ### A. Initial Brand Outreach
 ```
-Subject: Unlocking New Sales for [BRAND_NAME]
+Subject: Unlocking New Sales for [C_BRAND]
 
-Hi [FIRST_NAME],
+Hi [C_FNAME],
 
-I’m [YOUR_NAME], founder of [YOUR_COMPANY]. We’ve been tracking [BRAND_NAME]’s momentum and see room to amplify your reach on Amazon, Walmart, and direct-to-consumer channels.
+I’m [C_FNAME] [C_LNAME], founder of [U_COMPANY]. We’ve been tracking [C_BRAND]’s momentum and see room to amplify your reach on Amazon, Walmart, and direct-to-consumer channels.
 
 We typically start partnerships with a $10K+ opening PO and simultaneously:
 - Refresh product detail pages with data-backed copy, A+ Content, and new creative.
@@ -100,9 +100,9 @@ Use when you have strong conviction on product fit or personal brand affinity.
 ```
 Subject: Fast-Track Partnership for [PRODUCT_LINE]
 
-Hi [FIRST_NAME],
+Hi [C_FNAME],
 
-I’m a long-time fan of [PRODUCT_LINE] and would like to bring it into our catalog at [YOUR_COMPANY]. We manage [Enter yearly revenue] in annual sales and have allocation ready for a $15K opening PO this month.
+I’m a long-time fan of [PRODUCT_LINE] and would like to bring it into our catalog at [U_COMPANY]. We manage [Enter yearly revenue] in annual sales and have allocation ready for a $15K opening PO this month.
 
 I’ve attached our initial PO draft and a quick audit outlining keyword, review, and creative opportunities that could grow your sales 20%+ in the next two quarters.
 
@@ -115,15 +115,15 @@ Thank you,
 
 ### C. Distributor Outreach (Cold)
 ```
-Subject: Wholesale Partnership with [SUPPLIER_NAME]
+Subject: Wholesale Partnership with [C_SUPPLIER]
 
-Hi [FIRST_NAME],
+Hi [C_FNAME],
 
-I’m [YOUR_NAME] with [YOUR_COMPANY]. We manage nationwide distribution and e-commerce for premium brands and are expanding our purchasing roster.
+I’m [C_FNAME] [C_LNAME] with [U_COMPANY]. We manage nationwide distribution and e-commerce for premium brands and are expanding our purchasing roster.
 
 We’re prepared to start with a $10K+ order and handle bulk replenishment, prep, and logistics in-house. Our team keeps compliance tight and communicates proactively so restocking is predictable.
 
-Could you share the requirements for opening an account with [SUPPLIER_NAME]? I’m happy to complete paperwork or hop on a quick call this week.
+Could you share the requirements for opening an account with [C_SUPPLIER]? I’m happy to complete paperwork or hop on a quick call this week.
 
 Regards,  
 [SIGNATURE]
@@ -131,11 +131,11 @@ Regards,
 
 ### D. Distributor Outreach (Brand Referred)
 ```
-Subject: Referral from [BRAND_NAME]
+Subject: Referral from [C_BRAND]
 
-Hi [FIRST_NAME],
+Hi [C_FNAME],
 
-[BRAND_NAME] recommended we purchase through [SUPPLIER_NAME]. We’d like to set up a wholesale account and place an initial $12K PO immediately.
+[C_BRAND] recommended we purchase through [C_SUPPLIER]. We’d like to set up a wholesale account and place an initial $12K PO immediately.
 
 We pride ourselves on consistent reorder volume, MAP-compliant marketing, and a streamlined warehouse operation that keeps things simple on your end.
 
@@ -148,11 +148,11 @@ Best,
 ### E. Follow-Up Email After Voicemail
 Send after leaving a voicemail or if two business days pass without a reply.
 ```
-Subject: Quick Connect on [BRAND_NAME]
+Subject: Quick Connect on [C_BRAND]
 
-Hi [FIRST_NAME],
+Hi [C_FNAME],
 
-This is [YOUR_NAME] with [YOUR_COMPANY]. I just left you a voicemail and wanted to follow up. We’re ready to purchase inventory and support [BRAND_NAME] with advertising, listing optimization, and fast-moving inventory turns.
+This is [C_FNAME] [C_LNAME] with [U_COMPANY]. I just left you a voicemail and wanted to follow up. We’re ready to purchase inventory and support [C_BRAND] with advertising, listing optimization, and fast-moving inventory turns.
 
 Do you have 10 minutes this week to discuss next steps?
 

@@ -14,7 +14,7 @@
 ## **Version 1**
 
 **Opening:**  
-“Hello, my name is [YOUR_NAME], and I'm the owner of [YOUR_COMPANY]. We are an established wholesaler, distributor, and e-commerce retailer known for enhancing brand visibility and performance on major platforms. How are you today?”
+“Hello, my name is [C_FNAME] [C_LNAME], and I'm the owner of [U_COMPANY]. We are an established wholesaler, distributor, and e-commerce retailer known for enhancing brand visibility and performance on major platforms. How are you today?”
 
 **Pitch:**  
 “I’m reaching out because we handle over [Enter yearly revenue] in sales annually across the US, Canada, and Mexico, with a monthly purchasing volume exceeding [Enter purchasing volume]. We’re looking to expand our inventory and are very interested in establishing a direct purchasing relationship with your company.”
@@ -33,7 +33,7 @@
 ## **Version 2**
 
 **Opening:**  
-“Hello, my name is [YOUR_NAME], and I run [YOUR_COMPANY], a well-regarded wholesaler, distributor, and e-commerce retailer recognized for boosting brand performance online. How are you today?”
+“Hello, my name is [C_FNAME] [C_LNAME], and I run [U_COMPANY], a well-regarded wholesaler, distributor, and e-commerce retailer recognized for boosting brand performance online. How are you today?”
 
 **Pitch:**  
 “I’m reaching out because we handle [Enter yearly revenue] in annual sales across North America, with strong monthly purchasing power from existing brand partnerships. We’re eager to broaden our inventory by establishing a direct relationship with your company.”
@@ -52,7 +52,7 @@
 ## **Version 3**
 
 **Opening:**  
-“Hello, my name is [YOUR_NAME], and I'm the owner of [YOUR_COMPANY]. We specialize in wholesale, distribution, and e-commerce retailing, helping brands increase visibility across major online platforms. How are you today?”
+“Hello, my name is [C_FNAME] [C_LNAME], and I'm the owner of [U_COMPANY]. We specialize in wholesale, distribution, and e-commerce retailing, helping brands increase visibility across major online platforms. How are you today?”
 
 **Pitch:**  
 “Our company handles over [Enter yearly revenue] in sales each year across the US, Canada, and Mexico, with monthly purchasing volumes exceeding [Enter purchasing volume]. We’re currently seeking to expand our portfolio and are very interested in a direct purchase agreement with your company.”

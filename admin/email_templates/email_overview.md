@@ -16,7 +16,7 @@ Distribution is a foundational, often underused, pillar of a profitable Amazon w
    > “Totally understand — do you happen to have a list of your authorized distribution partners we can reach out to?”
 3. Around 75% of brands will provide this list.  
 4. Then contact those distributors:  
-   > “[BRAND_NAME] referred me to purchase their products directly from you. How can we get an account set up today?”
+   > “[C_BRAND] referred me to purchase their products directly from you. How can we get an account set up today?”
 
 **Why It Works:** Mentioning a brand name establishes instant credibility. Distributors rarely object when the brand itself has referred you.
 
@@ -24,7 +24,7 @@ Distribution is a foundational, often underused, pillar of a profitable Amazon w
 - Search by niche + “distributor” + region (e.g., “beauty distributor California”).  
 - Look for distributors near your prep center or warehouse for efficiency.  
 - Visit their websites, identify which brands they carry, and use a variation of the referral script:  
-  > “We work closely with [BRAND_NAME] and were referred to purchase through you. What’s the process to get started?”
+  > “We work closely with [C_BRAND] and were referred to purchase through you. What’s the process to get started?”
 
 Even without a formal referral, referencing a brand they already distribute builds trust.
 
@@ -38,7 +38,7 @@ Even without a formal referral, referencing a brand they already distribute buil
 - **Understand Their Incentives** – Distributors value reliable partners who order regularly, communicate clearly, and pay on time. Create urgency with a statement like: “I’m ready to place a $10,000 PO this week — just need to get set up.”  
 - **Personalization Wins** – Successful outreach relies on value-driven communication, professionalism, and persistence.  
 - **Depth Over Breadth** – Building trust and consistent communication leads to stronger, longer-lasting partnerships.  
-- **Act Like a Partner, Not a Buyer** – Position [YOUR_COMPANY] as a value-adding partner who helps strengthen brand presence, not just a reseller looking for profit.  
+- **Act Like a Partner, Not a Buyer** – Position [U_COMPANY] as a value-adding partner who helps strengthen brand presence, not just a reseller looking for profit.  
 
 
 ---
@@ -47,7 +47,7 @@ Even without a formal referral, referencing a brand they already distribute buil
 
 ### **Email Outreach**
 Email is the most scalable first touchpoint. Since brands and suppliers receive hundreds of daily requests, your message must stand out through **value and specificity**.  
-Provide clear advantages — show data, highlight efficiency, and explain why working with [YOUR_COMPANY] benefits them.
+Provide clear advantages — show data, highlight efficiency, and explain why working with [U_COMPANY] benefits them.
 
 ### **Call Outreach**
 Treat every call as a sales conversation. Prepare deeply — research their catalog, pricing, and competitive presence. Confidence and preparation make the difference.
@@ -58,7 +58,7 @@ If no reply after **2 business days**:
 - If you left a voicemail, send this short email:
 
 Hello,
-This is [YOUR_NAME] from [YOUR_COMPANY], a wholesale, distributor, and retail company.
+This is [C_FNAME] [C_LNAME] from [U_COMPANY], a wholesale, distributor, and retail company.
 I tried reaching you at [phone number] and would love to discuss opportunities to bring mutual value.
 What day works best for a quick call?
 Best,
@@ -69,9 +69,9 @@ Sam
 ## **3. Core Outreach Templates**
 
 ### **A. Initial Brand Outreach (General)**
-**Subject:** Unlocking Potential for [BRAND_NAME] on Amazon  
-Hi [FIRST_NAME],  
-I’m [YOUR_NAME] from [YOUR_COMPANY]. We’ve been following [BRAND_NAME] and see major growth potential on Amazon and other marketplaces.  
+**Subject:** Unlocking Potential for [C_BRAND] on Amazon  
+Hi [C_FNAME],  
+I’m [C_FNAME] [C_LNAME] from [U_COMPANY]. We’ve been following [C_BRAND] and see major growth potential on Amazon and other marketplaces.  
 
 We specialize in:
 - Optimizing product listings and ad campaigns  
@@ -85,17 +85,17 @@ Best,
 ---
 
 ### **B. Brand Partnership (BETA Template A)**
-**Subject:** Partnership Opportunity with [YOUR_COMPANY]  
-Hi [FIRST_NAME],  
+**Subject:** Partnership Opportunity with [U_COMPANY]  
+Hi [C_FNAME],  
 
-I’m [YOUR_NAME], Director of Sales at [YOUR_COMPANY]. We’re an e-commerce retailer helping brands grow across Amazon, Walmart, and other marketplaces.  
+I’m [C_FNAME] [C_LNAME], Director of Sales at [U_COMPANY]. We’re an e-commerce retailer helping brands grow across Amazon, Walmart, and other marketplaces.  
 
 We buy in volume and are looking to place an opening order of **$10K+**. Beyond purchasing, we also:
 - Optimize listings and ad campaigns  
 - Enforce MAP and protect brand integrity  
 - Boost visibility with influencer and UGC initiatives  
 
-Would you be available for a quick call next week to discuss how we can bring [BRAND_NAME] into our portfolio?  
+Would you be available for a quick call next week to discuss how we can bring [C_BRAND] into our portfolio?  
 
 Best,  
 [SIGNATURE]
@@ -103,10 +103,10 @@ Best,
 ---
 
 ### **C. Distributor Outreach (Unreferred)**  
-**Subject:** Wholesale Partnership from [YOUR_COMPANY]  
-Hi [FIRST_NAME],  
+**Subject:** Wholesale Partnership from [U_COMPANY]  
+Hi [C_FNAME],  
 
-I’m [YOUR_NAME], Director of Sales at [YOUR_COMPANY]. We’re reaching out to explore a wholesale partnership with [SUPPLIER_NAME].  
+I’m [C_FNAME] [C_LNAME], Director of Sales at [U_COMPANY]. We’re reaching out to explore a wholesale partnership with [C_SUPPLIER].  
 
 We’re prepared to place an initial **$10K+ order** and help streamline your inventory replenishment through:
 - Bulk purchasing power aligned with distributor volume  
@@ -121,10 +121,10 @@ Best,
 ---
 
 ### **D. Distributor Outreach (Referred A)**  
-**Subject:** Referral from [BRAND_NAME]  
-Hi [FIRST_NAME],  
+**Subject:** Referral from [C_BRAND]  
+Hi [C_FNAME],  
 
-[BRAND_NAME] referred me over to purchase their products directly from you. We’d like to set up a wholesale account and place an opening **$10K+ order**.  
+[C_BRAND] referred me over to purchase their products directly from you. We’d like to set up a wholesale account and place an opening **$10K+ order**.  
 
 Looking forward to getting started — what’s the best next step?  
 
@@ -134,12 +134,12 @@ Best,
 ---
 
 ### **E. Distributor Outreach (Referred B)**  
-**Subject:** Referral from [BRAND_NAME]  
-Hi [FIRST_NAME],  
+**Subject:** Referral from [C_BRAND]  
+Hi [C_FNAME],  
 
-[BRAND_NAME] referred me over to purchase their products directly from you. We’d like to open a wholesale account and start with an initial order of **$10K+**.  
+[C_BRAND] referred me over to purchase their products directly from you. We’d like to open a wholesale account and start with an initial order of **$10K+**.  
 
-At [YOUR_COMPANY], we focus on:  
+At [U_COMPANY], we focus on:  
 - Consistent reorder volume and reliable account management  
 - Fast processing and transparent communication  
 - Long-term partnerships built on trust and efficiency  
@@ -152,11 +152,11 @@ Best,
 ---
 
 ### **F. Priority Brand Outreach (High-Interest)**
-**Subject:** Partnership Inquiry from [YOUR_COMPANY]  
-Hi [FIRST_NAME],  
+**Subject:** Partnership Inquiry from [U_COMPANY]  
+Hi [C_FNAME],  
 
-My name is [YOUR_NAME], Director of Sales at [YOUR_COMPANY].  
-We’re highly interested in purchasing [PRODUCTS] from [BRAND_NAME] in quantities exceeding [ESTIMATED_VOLUME].  
+My name is [C_FNAME] [C_LNAME], Director of Sales at [U_COMPANY].  
+We’re highly interested in purchasing [PRODUCTS] from [C_BRAND] in quantities exceeding [ESTIMATED_VOLUME].  
 
 I’m personally a fan of your product line and would love to get a purchase order finalized this week.  
 Attached is our **initial PO draft** for your reference.  
@@ -170,9 +170,9 @@ Best,
 
 ### **G. Second Follow-Up**
 **Subject:** Following Up on Our Potential Partnership  
-Hi [FIRST_NAME],  
+Hi [C_FNAME],  
 
-Just following up on my previous message about working together to expand [BRAND_NAME]’s marketplace reach.  
+Just following up on my previous message about working together to expand [C_BRAND]’s marketplace reach.  
 We regularly reinvest part of our revenue into advertising to further boost brand visibility and growth.  
 
 Would you be open to a quick call to discuss next steps?  
